@@ -4,6 +4,7 @@ import "@fontsource/be-vietnam-pro";
 import "@fontsource-variable/gabarito";
 import { SITE_CONFIG } from "@config";
 import Footer from "@components/Footer.astro";
+import Analytics from '@vercel/analytics/astro'
 
 const {
   title,
@@ -30,7 +31,7 @@ const ogImgUrl = canonicalURL + socialImage;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
+    <Analytics />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />

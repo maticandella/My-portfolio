@@ -1,0 +1,72 @@
+---
+import Section from "./Section.astro";
+import { Image } from "astro:assets";
+import type { ProjectProps } from "@types";
+
+interface Props {
+  projects: ProjectProps[];
+}
+
+const { projects } = Astro.props;
+---
+
+<Section text="Proyectos" href="projects">
+  {projects.map(({ name, summary, image, linkPreview, linkApis, linkSource, technologies }, index) => (
+    <div class="flex flex-col min-h-[80vh] items-center justify-center p-4">
+      <div class="relative w-full max-w-[48rem] rounded-3xl  shadow-lg border border-neutral/10 overflow-hidden">
+        {/* Imagen */}
+        <div class="w-full h-64 sm:h-80">
+          <img
+            src={image}
+            alt={name}
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Contenido */}
+        <div class="p-6 sm:p-8">
+          <h3 class="text-xl sm:text-2xl font-serif mb-3 text-primary">{name}</h3>
+          <p class="mb-5 text-neutral text-sm sm:text-base">{summary}</p>
+
+          {/* Tecnologías */}
+          <div class="flex flex-wrap gap-4 mb-6">
+            {technologies.map((tech) => (
+              <img 
+                src={`../../public/icons/${tech.toLowerCase()}.png`} 
+                alt={tech} 
+                class="w-8 h-8 sm:w-10 sm:h-10"
+              />
+            ))}
+          </div>
+
+          {/* Links */}
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-end">
+            <a 
+              href={linkSource} 
+              target="_blank" 
+              class="text-primary hover:text-primary/80 text-center px-4 py-2 rounded-lg bg-neutral/10 hover:bg-neutral/20 transition"
+            >
+              Ver código
+            </a>
+            <a 
+              href={linkPreview} 
+              target="_blank" 
+              class="text-primary hover:text-primary/80 text-center px-4 py-2 rounded-lg bg-neutral/10 hover:bg-neutral/20 transition"
+            >
+              Demo
+            </a>
+            {linkApis && (
+              <a 
+                href={linkApis} 
+                target="_blank" 
+                class="text-primary hover:text-primary/80 text-center px-4 py-2 rounded-lg bg-neutral/10 hover:bg-neutral/20 transition"
+              >
+                APIs
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</Section>

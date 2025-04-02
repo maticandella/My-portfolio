@@ -4,7 +4,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.2-0F172A?logo=tailwindcss)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-3178C6?logo=typescript)
 
-## 🌐 [Ver Demo](https://editoriapp.vercel.app) | [GitHub](https://github.com/maticandella)
+## 🌐 [Ver Demo](https://maticandella-portfolio.vercel.app/) | [GitHub](https://github.com/maticandella)
 
 ---
 

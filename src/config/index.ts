@@ -51,14 +51,14 @@ export const SITE_CONTENT: SiteContent = {
       image: "/mockup4.jpg",
       technologies: ["Angular", "TypeScript", "Tailwind", "Node.js", "PostgreSQL", "Sequelize", "Swagger"]  
     },
-    // {
-    //   name: "APIS para EditoriApp",
-    //   summary: "Permite gestionar las operaciones del lado del servidor para una Editorial de Libros.",
-    //   linkPreview: "https://editorial-api.vercel.app/api/docs/",
-    //   linkSource: "https://github.com/maticandella/Editorial-API",
-    //   image: "/shopify-clon.png",
-    //   technologies: ["Node.js", "PostgreSQL", "Sequelize", "Swagger"]  
-    // },
+    {
+      name: "FlorFest",
+      summary: "Invitación digital personalizada para fiesta de 15, con diseño moderno y responsive.",
+      linkPreview: "https://florfest.vercel.app/",
+      linkSource: "https://github.com/maticandella/Templates",
+      image: "/mockup5.jpg",
+      technologies: ["Astro", "Tailwind"]  
+    },
   ],
   about: {
     description: `

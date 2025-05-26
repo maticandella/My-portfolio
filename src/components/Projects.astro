@@ -33,7 +33,8 @@ const { projects } = Astro.props;
             {technologies.map((tech) => (
               <img 
                 src={`/icons/${tech}.png`}
-                alt={tech} 
+                alt={tech}
+                title={tech}
                 class="w-8 h-8 sm:w-10 sm:h-10"
               />
             ))}

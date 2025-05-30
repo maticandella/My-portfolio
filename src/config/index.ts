@@ -54,7 +54,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "FlorFest",
       summary: "Invitación digital personalizada para fiesta de 15, con diseño moderno y responsive.",
-      linkPreview: "https://florfest.vercel.app/",
+      linkPreview: "https://tumomento.vercel.app/",
       linkSource: "https://github.com/maticandella/Templates",
       image: "/mockup5.jpg",
       technologies: ["Astro", "Tailwind"]  
